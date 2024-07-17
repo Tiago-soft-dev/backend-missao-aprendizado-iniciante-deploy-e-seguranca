@@ -1,8 +1,9 @@
+require('dotenv').config()
 const express=require('express')
 const { MongoClient, ObjectId } = require('mongodb')
 
 //dados de configuracao do servidor
-const dbUrl = 'mongodb+srv://admin:WeL94dTtknnEOVJr@cluster0.1b2ewyf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const dbUrl = process.env.DATABASE_URL
 const dbName = 'mongodb-intro-e-implementacao'
 
 async function main(){
